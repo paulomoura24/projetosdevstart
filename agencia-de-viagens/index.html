@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TripMe - Explore o Inexplorado</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header id="top">
+        <nav class="navbar">
+            <div class="logo">TripMe</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#minha-viagem">Minha Viagem</a></li>
+                <li><a href="#nos-encontre">Nos Encontre</a></li>
+                <li><a href="#conselhos">Conselhos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="home">
+        <section class="banner" role="img" aria-label="Vista panorâmica de um vilarejo europeu remoto">
+            <div class="banner-overlay">
+                <h1>Descubra Vilarejos Esquecidos pelo Tempo</h1>
+                <p>A jornada para o seu próximo destino começa aqui.</p>
+                <a href="#minha-viagem" class="btn-primary">Explorar Agora</a>
+            </div>
+        </section>
+
+        <section id="minha-viagem" class="content-section">
+            <article>
+                <h2>Minha Viagem</h2>
+                <p>Planeje seu roteiro personalizado pelos Alpes ou pelas vilas costeiras do Mediterrâneo.</p>
+                <div class="card-container">
+                    <article class="card">
+                        <img src="images/Cabril.jpg" alt="Caminhada cultural pelo vilarejo de Cabril">
+                        <h3>Roteiro Cultural</h3>
+                    </article>
+                    <article class="card" id="card-destaque">
+                        <img src="images/Gastronomia.webp" alt="Prato gastronômico típico de vilarejo europeo">
+                        <h3>Roteiro Gastronômico</h3>
+                    </article>
+                    <article class="card">
+                        <img src="images/PizBermina.jpg" alt="Trilha de aventura na montanha Piz Bernina">
+                        <h3>Roteiro de Aventura</h3>
+                    </article>
+                </div>
+            </article>
+            <button type="button" class="back-to-top" aria-label="Voltar ao topo" onclick="location.href='#top'">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true" class="icon-up">
+                    <path fill-rule="evenodd" d="M8 12a.5.5 0 0 0 .5-.5V3.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4-.007-.007a.498.498 0 0 0-.697.007l-4 4a.5.5 0 0 0 .708.708L7.5 3.707V11.5A.5.5 0 0 0 8 12z"/>
+                </svg>
+                Voltar ao topo
+            </button>
+        </section>
+
+        <hr>
+
+        <section id="nos-encontre" class="content-section">
+            <h2>Nos Encontre</h2>
+            <p>Visite nossa agência física ou entre em contato virtualmente. Temos representantes bilíngues e material impresso para ajudar na organização da sua viagem.</p>
+            <aside class="info-box">
+                <p><strong>Endereço:</strong> Rua Felix Pereira, 133<br>Centro - Barreira - CE</p>
+                <p><strong>Telefone:</strong> +55 85 994387940</p>
+                <p><strong>Horário de atendimento:</strong> Seg–Sex: 9h–18h</p>
+            </aside>
+            <button type="button" class="back-to-top" aria-label="Voltar ao topo" onclick="location.href='#top'">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true" class="icon-up">
+                    <path fill-rule="evenodd" d="M8 12a.5.5 0 0 0 .5-.5V3.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4-.007-.007a.498.498 0 0 0-.697.007l-4 4a.5.5 0 0 0 .708.708L7.5 3.707V11.5A.5.5 0 0 0 8 12z"/>
+                </svg>
+                Voltar ao topo
+            </button>
+        </section>
+
+        <hr>
+
+        <section id="conselhos" class="content-section">
+            <h2>Conselhos</h2>
+            <p class="intro">Antes de partir, confira estas recomendações práticas para tornar sua experiência segura e memorável:</p>
+            <ul class="advice-list">
+                <li>📜 Leve sempre um mapa físico para áreas remotas; a internet pode ser instável.</li>
+                <li>🙏 Respeite a cultura e o silêncio dos vilarejos locais; muitos são protegidos por leis ambientais.</li>
+                <li>🍽️ Experimente a culinária regional em pequenas tavernas e converse com os moradores.</li>
+                <li>🎒 Use calçados confortáveis e leve água em trilhas longas.</li>
+            </ul>
+            <button type="button" class="back-to-top" aria-label="Voltar ao topo" onclick="location.href='#top'">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true" class="icon-up">
+                    <path fill-rule="evenodd" d="M8 12a.5.5 0 0 0 .5-.5V3.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4-.007-.007a.498.498 0 0 0-.697.007l-4 4a.5.5 0 0 0 .708.708L7.5 3.707V11.5A.5.5 0 0 0 8 12z"/>
+                </svg>
+                Voltar ao topo
+            </button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 TripMe - Explore com consciência. Desenvolvido por Paulo Sérgio.</p>
+    </footer>
+
+</body>
+</html>
