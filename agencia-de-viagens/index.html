@@ -3,14 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TripMe - Explore vilarejos esquecidos pelo tempo. Planeje roteiros personalizados pelos Alpes e vilas costeiras do Mediterrâneo.">
+    <meta name="keywords" content="viagens, vilarejos, alpes, mediterrâneo, turismo, roteiro cultural, gastronômico, aventura">
     <title>TripMe - Explore o Inexplorado</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
     <header id="top">
         <nav class="navbar">
             <div class="logo">TripMe</div>
+            <button class="hamburger" aria-label="Menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#minha-viagem">Minha Viagem</a></li>
@@ -34,24 +43,25 @@
                 <h2>Minha Viagem</h2>
                 <p>Planeje seu roteiro personalizado pelos Alpes ou pelas vilas costeiras do Mediterrâneo.</p>
                 <div class="card-container">
-                    <article class="card">
-                        <img src="images/Cabril.jpg" alt="Caminhada cultural pelo vilarejo de Cabril">
+                    <article class="card" data-modal="cultural">
+                        <img src="images/Cabril.jpg" alt="Caminhada cultural pelo vilarejo de Cabril" loading="lazy">
                         <h3>Roteiro Cultural</h3>
+                        <p>Explore vilarejos históricos com caminhadas guiadas.</p>
                     </article>
-                    <article class="card" id="card-destaque">
-                        <img src="images/Gastronomia.webp" alt="Prato gastronômico típico de vilarejo europeo">
+                    <article class="card destaque" data-modal="gastronomico">
+                        <img src="images/Gastronomia.webp" alt="Prato gastronômico típico de vilarejo europeo" loading="lazy">
                         <h3>Roteiro Gastronômico</h3>
+                        <p>Deguste pratos locais em tavernas autênticas.</p>
                     </article>
-                    <article class="card">
-                        <img src="images/PizBermina.jpg" alt="Trilha de aventura na montanha Piz Bernina">
+                    <article class="card" data-modal="aventura">
+                        <img src="images/PizBermina.jpg" alt="Trilha de aventura na montanha Piz Bernina" loading="lazy">
                         <h3>Roteiro de Aventura</h3>
+                        <p>Trilhas emocionantes em montanhas deslumbrantes.</p>
                     </article>
                 </div>
             </article>
             <button type="button" class="back-to-top" aria-label="Voltar ao topo" onclick="location.href='#top'">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true" class="icon-up">
-                    <path fill-rule="evenodd" d="M8 12a.5.5 0 0 0 .5-.5V3.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4-.007-.007a.498.498 0 0 0-.697.007l-4 4a.5.5 0 0 0 .708.708L7.5 3.707V11.5A.5.5 0 0 0 8 12z"/>
-                </svg>
+                <i class="fas fa-arrow-up"></i>
                 Voltar ao topo
             </button>
         </section>
@@ -66,10 +76,27 @@
                 <p><strong>Telefone:</strong> +55 85 994387940</p>
                 <p><strong>Horário de atendimento:</strong> Seg–Sex: 9h–18h</p>
             </aside>
+            <div class="contact-form">
+                <h3>Entre em Contato</h3>
+                <form id="contact-form">
+                    <div class="form-group">
+                        <label for="name">Nome</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mensagem</label>
+                        <textarea id="message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary">Enviar Mensagem</button>
+                </form>
+                <div id="form-message"></div>
+            </div>
             <button type="button" class="back-to-top" aria-label="Voltar ao topo" onclick="location.href='#top'">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true" class="icon-up">
-                    <path fill-rule="evenodd" d="M8 12a.5.5 0 0 0 .5-.5V3.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4-.007-.007a.498.498 0 0 0-.697.007l-4 4a.5.5 0 0 0 .708.708L7.5 3.707V11.5A.5.5 0 0 0 8 12z"/>
-                </svg>
+                <i class="fas fa-arrow-up"></i>
                 Voltar ao topo
             </button>
         </section>
@@ -80,23 +107,33 @@
             <h2>Conselhos</h2>
             <p class="intro">Antes de partir, confira estas recomendações práticas para tornar sua experiência segura e memorável:</p>
             <ul class="advice-list">
-                <li>📜 Leve sempre um mapa físico para áreas remotas; a internet pode ser instável.</li>
-                <li>🙏 Respeite a cultura e o silêncio dos vilarejos locais; muitos são protegidos por leis ambientais.</li>
-                <li>🍽️ Experimente a culinária regional em pequenas tavernas e converse com os moradores.</li>
-                <li>🎒 Use calçados confortáveis e leve água em trilhas longas.</li>
+                <li><i class="fas fa-map"></i> Leve sempre um mapa físico para áreas remotas; a internet pode ser instável.</li>
+                <li><i class="fas fa-praying-hands"></i> Respeite a cultura e o silêncio dos vilarejos locais; muitos são protegidos por leis ambientais.</li>
+                <li><i class="fas fa-utensils"></i> Experimente a culinária regional em pequenas tavernas e converse com os moradores.</li>
+                <li><i class="fas fa-hiking"></i> Use calçados confortáveis e leve água em trilhas longas.</li>
             </ul>
             <button type="button" class="back-to-top" aria-label="Voltar ao topo" onclick="location.href='#top'">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true" class="icon-up">
-                    <path fill-rule="evenodd" d="M8 12a.5.5 0 0 0 .5-.5V3.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4-.007-.007a.498.498 0 0 0-.697.007l-4 4a.5.5 0 0 0 .708.708L7.5 3.707V11.5A.5.5 0 0 0 8 12z"/>
-                </svg>
+                <i class="fas fa-arrow-up"></i>
                 Voltar ao topo
             </button>
         </section>
     </main>
 
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
     <footer>
         <p>&copy; 2026 TripMe - Explore com consciência. Desenvolvido por Paulo Sérgio.</p>
     </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
 
 </body>
 </html>
