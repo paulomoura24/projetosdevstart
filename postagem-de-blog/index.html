@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Blog - API Post</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">BlogDoPaulo</h1>
+            <p class="tagline">Compartilhe suas ideias com o mundo</p>
+        </div>
+    </header>
+
+    <main>
+        <section class="container">
+            <h2>Criar Novo Post</h2>
+            
+            <form id="blog-form">
+                <div class="field">
+                    <label for="titulo">Título</label>
+                    <input type="text" id="titulo" placeholder="Digite o título do post" required>
+                </div>
+
+                <div class="field">
+                    <label for="conteudo">Conteúdo</label>
+                    <textarea id="conteudo" rows="5" placeholder="O que você está pensando?" required></textarea>
+                </div>
+
+                <button type="submit" id="btn-publicar" class="btn-primary">Publicar</button>
+            </form>
+        </section>
+
+        <section class="container render-area">
+            <h2>Feed de Posts</h2>
+            <div id="posts-feed">
+                <!-- Posts will be rendered here -->
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
